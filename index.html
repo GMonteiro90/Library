@@ -8,8 +8,21 @@
     <title>Library</title>
   </head>
   <body>
-    <div class="display">My Library</div>
-    <button class="addBook">Add Book</button>
+    <div class="title">
+      <h1>My Library</h1>
     </div>
+    <div class="display"></div>
+      <button id="addBook">Add Book</button>
+      <form id="addBookForm" style="display: none;">
+        <label for="bookTitle">Title</label>
+        <input type="text" id="bookTitle" name="bookTitle" placeholder="Title" required>
+        <label for="bookAuthor">Author</label>
+        <input type="text" id="bookAuthor" name="bookAuthor" placeholder="Author" required><br>
+        <label for="bookPages">Pages</label>
+        <input type="number" id="bookPages" name="bookPages" min="0" required>
+        <label for="bookRead">Read</label>
+        <input type="checkbox" id="bookRead" name="bookRead"><br>
+        <button class="submit" type="submit">Submit</button>
+      </form>
   </body>
 </html>

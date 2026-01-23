@@ -16,7 +16,7 @@ function addBookToLibrary(title, author, pages, read){
     myLibrary.push(book);
 }
 
-addBookToLibrary('The Shinning', "Stepheng King", 192, true);
+addBookToLibrary('The Shinning', "Stephen King", 192, true);
 addBookToLibrary('The Bible', "JC himself", 1000, false);
 addBookToLibrary('Finding Nemo', "IDK", 1, true);
 
@@ -56,4 +56,34 @@ function renderLibrary(){
         });
 }
 };
+
+const btn = document.getElementById("addBook");
+const form = document.getElementById("addBookForm");
+
+btn.addEventListener("click", () => {
+    if(form.style.display === "none"){
+        form.style.display = "block";
+        btn.textContent = "Hide Form";
+    } else {
+        form.style.display = "none";
+        btn.textContent = "Add Book";
+    }
+});
+
+form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+        const bookTitle = document.getElementById("bookTitle").value;
+        const bookAuthor = document.getElementById("bookAuthor").value;
+        const bookPages = Number(document.getElementById("bookPages").value);
+        const bookRead = document.getElementById("bookRead").checked;
+
+        addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
+        renderLibrary();
+
+        form.reset();
+        form.style.display = "none";
+        btn.textContent = "Add Book";
+        });
+
 renderLibrary();
