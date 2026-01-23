@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flexbox;
-    background-color: #2d545e;
+}
+
+body{
+  background-color: #4c5658;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -14,12 +19,26 @@
     color: white;
 }
 
+.add{
+  margin: 10px;
+}
+
+#addBook{
+  margin: 10px;
+  padding: 10px;
+}
+
+#bookTitle, #bookAuthor, #bookPages, #submit{
+  margin: 5px 10px;
+  padding: 5px;
+}
+
 .display {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background-color:#e2cdb5;
-  height: 100vh;
+  background-color: #e2cdb5;
+  flex: 1;
 }
 
 .book {
@@ -28,7 +47,6 @@
   margin: 25px 10px;
   padding: 10px;
   flex: 0 0 20%;
-  min-width: 0;
   height: 15vh;
   background-color: #70666d;
 }
@@ -37,5 +55,9 @@ h3, p{
     background-color: #70666d;
     color: white;
     margin: 10px;
-    padding: auto;
+}
+
+.delButton, .rButton{
+  margin: 2px;
+  padding: 2px;
 }

@@ -11,7 +11,7 @@
     <div class="title">
       <h1>My Library</h1>
     </div>
-    <div class="display"></div>
+    <div class="add">
       <button id="addBook">Add Book</button>
       <form id="addBookForm" style="display: none;">
         <label for="bookTitle">Title</label>
@@ -22,7 +22,9 @@
         <input type="number" id="bookPages" name="bookPages" min="0" required>
         <label for="bookRead">Read</label>
         <input type="checkbox" id="bookRead" name="bookRead"><br>
-        <button class="submit" type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </form>
+    </div>
+    <div class="display"></div>
   </body>
 </html>
