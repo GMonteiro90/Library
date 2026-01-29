@@ -1,6 +1,6 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read){
+/*function Book(title, author, pages, read){
     if (!new.target){
         throw Error("Must use the new operator to call the function");
     }
@@ -9,6 +9,16 @@ function Book(title, author, pages, read){
     this.author = author;
     this.pages = pages;
     this.read = read;
+}*/
+
+class Book{
+    constructor(title, author, pages, read){
+        this.id = crypto.randomUUID();
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read){

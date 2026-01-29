@@ -35,6 +35,7 @@ body{
 
 .display {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
   background-color: #e2cdb5;
@@ -47,7 +48,8 @@ body{
   margin: 25px 10px;
   padding: 10px;
   flex: 0 0 20%;
-  height: 15vh;
+  min-height: 180px;
+  max-height: 260px;
   background-color: #70666d;
 }
 
